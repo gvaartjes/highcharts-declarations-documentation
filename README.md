@@ -4,6 +4,10 @@
 
 Highcharts 7 provides TypeScript declarations for describing functionality and possibilities of the Highcharts libraries, similar to a header file in C-based languages. TypeScript-compatible editors can give you now tooltips and suggestions for Highcharts as you type. TypeScript compilers can watch and point out potential problems in your use-case of Highcharts. The result is a faster and better fail-proofed development of Highcharts-based solutions.
 
+## Overview
+
+{{TOC}}
+
 ## Installation
 You only need a TypeScript-capable Editor, like Microsoft's Visual Studio Code, to get autocompletion and hints for Highcharts.
 
@@ -37,12 +41,14 @@ npm uninstall @types/highcharts
 ### Migration from JavaScript
 For full fail-proofed development you may convert your source code to TypeScript. The initial step is:
 ```sh
-npm install typescript &amp;&amp; npx tsc --init
+npm install typescript && npx tsc --init
 ```
 
 More information about migrating JavaScript projects to TypeScript can be found in the official [TypeScript handbook](http://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html).
 
-## Solving Problems: Debugging
+## Solving Problems
+
+### Solving Problems: Debugging
 If TypeScript is falling over your Highcharts options, it might be that it is not finding the correct series as a reference. In that case you can cast series options to the correct type.
 ```ts
 series: [{
@@ -51,7 +57,7 @@ series: [{
 }]
 ```
 
-## Solving Problems: Missing modules
+### Solving Problems: Missing Modules
 In some cases there are not yet declarations for a Highcharts module available. In that case, you have to cast modules and unknown functions to the `any` type. Create first a `global.d.ts` file in your root folder with the following file content:
 ```ts
 declare module '*';
@@ -79,13 +85,13 @@ AccessibilityModule(Highcharts);
 });
 ```
 
-## Solving Problems: Reporting Bugs
-The TypeScript declarations for Highcharts are in a beta state, where they can be used in production, but might break existing code with future type updates. In these cases only small modifications to types will be necessary. If you found something in TypeScript that is not working like in our [documentation](https://api.highcharts.com/) or [Demos](https://www.highcharts.com/demo), you should take a look at our 
+### Solving Problems: Reporting Bugs
+The TypeScript declarations for Highcharts are in a beta state, where they can be used in production, but might break existing code with future type updates. In these cases only small modifications to types will be necessary. If you found something in TypeScript that is not working like in our [documentation](https://api.highcharts.com/) or [demos](https://www.highcharts.com/demo), you can create an [issue report](https://github.com/highcharts/highcharts/issues) to let us know about it.
 
-## Advanced: Extending Highcharts in TypeScript
+## Extending Highcharts in TypeScript
 The Highcharts libraries come with a huge amount of possibilities right out of the box, but sometimes you need something special and like to customize you chart with more than some options. Extending Highcharts is easy as well and teaching TypeScript about it, too.
 
-### To Do
+### Steps
 - Set proper types for your extensions
 - Declare additional interfaces with your extensions to the Highcharts namespace
 - Make use of existing [Highcharts types](https://api.highcharts.com/class-reference/Highcharts) and [interfaces](https://api.highcharts.com/class-reference/Highcharts.Dictionary_T_)
