@@ -4,10 +4,6 @@
 
 Highcharts 7 provides TypeScript declarations for describing functionality and possibilities of the Highcharts libraries, similar to a header file in C-based languages. TypeScript-compatible editors can give you now tooltips and suggestions for Highcharts as you type. TypeScript compilers can watch and point out potential problems in your use-case of Highcharts. The result is a faster and better fail-proofed development of Highcharts-based solutions.
 
-## Overview
-
-{{TOC}}
-
 ## Installation
 You only need a TypeScript-capable Editor, like Microsoft's Visual Studio Code, to get autocompletion and hints for Highcharts.
 
