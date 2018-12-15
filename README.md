@@ -91,6 +91,7 @@ The Highcharts libraries come with a huge amount of possibilities right out of t
 - Set proper types for your extensions
 - Declare additional interfaces with your extensions to the Highcharts namespace
 - Make use of existing [Highcharts types](https://api.highcharts.com/class-reference/Highcharts) and [interfaces](https://api.highcharts.com/class-reference/Highcharts.Dictionary_T_)
+- For a deep dive into TypeScript declaration take a look at the official [TypeScript guide](http://www.typescriptlang.org/docs/handbook/declaration-files/deep-dive.html).
 
 ### Example
 If you like to have a custom highlight function for you data points, you could come up with the following code. You might notice, that the beginning code is actually not real TypeScript and instead is just common ECMAScript, widely known as JavaScript:
